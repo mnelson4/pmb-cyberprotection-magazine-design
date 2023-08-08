@@ -66,7 +66,12 @@ function pmbcpm_register_design() {
                                     [
                                         'html_label_text' => __('Magazine Name', 'print-my-blog')
                                     ]
-                                )
+                                ),
+                                'article_ending_icon' => new AdminFileUploaderInput([
+                                    'html_label_text' => __('Article End Icon', 'print-my-blog'),
+                                    'html_help_text' => __('Icon that appears inline with text at the end of each article.', 'print-my-blog'),
+                                    'default' => get_site_icon_url()
+                                ]),
                             ],
                     ]))->merge(pmb_generic_design_form());
                 },
