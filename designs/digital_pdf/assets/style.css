@@ -16,6 +16,12 @@
             content: counter(page)
         }
     }
+    @page title{
+        margin:10px;
+        @bottom-right{
+            content:none;
+        }
+    }
     body{
         prince-footnote-policy: keep-with-line;
     }
@@ -28,6 +34,24 @@
         font-family:Calibri;
         page-break-after:avoid;
         page-break-inside:avoid;
+    }
+
+    /* title page */
+    .pmb-title-page{
+        page:title;
+    }
+    .pmbcpm-title-page-logo{
+        width:100%;
+    }
+    .pmbcpm-title-page-issue-wrapper{
+        text-align:right;
+        margin-top:-40px;
+    }
+    .pmbcpm-title-page-cover-image-wrapper{
+        -prince-float:bottom;
+    }
+    .pmbcpm-title-page-cover-image{
+        width:100%;
     }
 
     /* toc, if it were used */

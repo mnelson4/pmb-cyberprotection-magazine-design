@@ -40,13 +40,14 @@ function pmbcpm_register_design() {
     pmb_register_design_template(
         'cyber_protection_digital',
         function () {
+
             return [
                 'title' => __('Cyber Protection Magazine Digital PDF'),
                 'format' => 'digital_pdf',
                 'dir' => PMBCPM_MAIN_DIR . '/designs/digital_pdf/',
                 'default' => 'cyber_protection_digital',
                 'url' => plugins_url('designs/digital_pdf/', PMBCPM_MAIN_FILE),
-                'docs' => '',
+//                'docs' => '',
                 'supports' => [
                     'front_matter',
                     'back_matter',
@@ -59,6 +60,10 @@ function pmbcpm_register_design() {
                     'center_content'
                 ],
                 'design_form_callback' => function () {
+                    $icon = get_site_icon_url();
+                    if( ! $icon){
+                        $icon = PMB_IMAGES_URL . 'icon-128x128.jpg';
+                    }
                     return (new FormSection([
                         'subsections' =>
                             [
@@ -67,10 +72,15 @@ function pmbcpm_register_design() {
                                         'html_label_text' => __('Magazine Name', 'print-my-blog')
                                     ]
                                 ),
+                                'title_page_logo' => new AdminFileUploaderInput([
+                                    'html_label_text' => __('Title Page Logo Image', 'print-my-blog'),
+                                    'html_help_text' => __('A full-width logo that will occupy the full width of the title page.', 'print-my-blog'),
+                                    'default' => $icon
+                                ]),
                                 'article_ending_icon' => new AdminFileUploaderInput([
                                     'html_label_text' => __('Article End Icon', 'print-my-blog'),
                                     'html_help_text' => __('Icon that appears inline with text at the end of each article.', 'print-my-blog'),
-                                    'default' => get_site_icon_url()
+                                    'default' => $icon
                                 ]),
                             ],
                     ]))->merge(pmb_generic_design_form());
@@ -81,7 +91,7 @@ function pmbcpm_register_design() {
                             'month' => new TextInput(
                                 [
                                     'html_label_text' => __('Issue Month', 'print-my-blog'),
-                                    'html_help_text' => __('As a two-digit number. Eg, "02" for February. This is primarily used in footers and title page.'),
+                                    'html_help_text' => __('In any format you like: full month name, abbreviation, number, etc. This is primarily used in footers and title page.'),
                                 ]
                             ),
                             'year' => new TextInput(
@@ -91,7 +101,7 @@ function pmbcpm_register_design() {
                                 ]
                             ),
                             'title_page_image' => new AdminFileUploaderInput([
-                                'html_label_text' => __('Title Page Image', 'print-my-blog'),
+                                'html_label_text' => __('Title Page Cover Image', 'print-my-blog'),
                                 'html_help_text' => __('Image that will occupy the majority of the title page.', 'print-my-blog'),
                             ]),
                             'last_page_image' => new AdminFileUploaderInput([
