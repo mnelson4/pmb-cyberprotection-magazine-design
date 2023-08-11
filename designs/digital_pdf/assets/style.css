@@ -53,6 +53,9 @@
         /*width:100%;*/
         /*height:100%;*/
     }
+    .pmb-posts .pmb-dynamic-resize img{
+        height:50px;
+    }
 
     /* toc, if it were used */
     .pmb-toc-list li{
