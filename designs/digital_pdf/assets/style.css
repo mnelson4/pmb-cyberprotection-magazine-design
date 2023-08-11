@@ -44,10 +44,10 @@
     }
     .pmbcpm-title-page-issue-wrapper{
         text-align:right;
-        margin-top:-40px;
+        margin-top:-30vw;
     }
     .pmbcpm-title-page-cover-image-wrapper{
-        -prince-float:bottom;
+        margin-top:50px;
     }
     .pmbcpm-title-page-cover-image{
         width:100%;

@@ -26,7 +26,7 @@
     if($cover_image){
         ?>
         <div class="pmbcpm-title-page-cover-image-wrapper">
-            <img src="<?php esc_attr_e($cover_image);?>" class="pmbcpm-title-page-cover-image">
+            <img src="<?php esc_attr_e($cover_image);?>" class="pmbcpm-title-page-cover-image pmb-dynamic-resize">
         </div>
         <?php
     }
