@@ -25,8 +25,8 @@
     $cover_image = $pmb_project->getSetting('title_page_image');
     if($cover_image){
         ?>
-        <div class="pmbcpm-title-page-cover-image-wrapper">
-            <img src="<?php esc_attr_e($cover_image);?>" class="pmbcpm-title-page-cover-image pmb-dynamic-resize">
+        <div class="pmbcpm-title-page-cover-image-wrapper pmb-dynamic-resize">
+            <img src="<?php esc_attr_e($cover_image);?>" class="pmbcpm-title-page-cover-image">
         </div>
         <?php
     }
