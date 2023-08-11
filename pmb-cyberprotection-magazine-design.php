@@ -64,6 +64,11 @@ function pmbcpm_register_design() {
                     if( ! $icon){
                         $icon = PMB_IMAGES_URL . 'icon-128x128.jpg';
                     }
+                    $context = \PrintMyBlog\system\Context::instance();
+                    /**
+                     * @var $default_design_templates \PrintMyBlog\domain\DefaultDesignTemplates
+                     */
+                    $default_design_templates = $context->reuse('PrintMyBlog\domain\DefaultDesignTemplates');
                     return (new FormSection([
                         'subsections' =>
                             [
@@ -82,6 +87,7 @@ function pmbcpm_register_design() {
                                     'html_help_text' => __('Icon that appears inline with text at the end of each article.', 'print-my-blog'),
                                     'default' => $icon
                                 ]),
+                                'fonts' => $default_design_templates->getPdfFontSettings()
                             ],
                     ]))->merge(pmb_generic_design_form());
                 },

@@ -19,7 +19,7 @@
             <?php
         }
         ?>
-        <div class="pmbcpm-title-page-issue-wrapper"><span class="pmbcpm-title-page-issue"><?php echo $pmb_project->getSetting('month');?> || <?php echo $pmb_project->getSEtting('year');?></span></div>
+        <div class="pmbcpm-title-page-issue-wrapper"><span class="pmbcpm-title-page-issue pmb-header-like"><?php echo $pmb_project->getSetting('month');?> || <?php echo $pmb_project->getSEtting('year');?></span></div>
     </div>
     <?php
     $cover_image = $pmb_project->getSetting('title_page_image');

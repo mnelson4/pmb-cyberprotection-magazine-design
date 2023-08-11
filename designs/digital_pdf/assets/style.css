@@ -12,7 +12,10 @@
             border-top: solid black thin;
             padding-top: 8pt;
         }
-        @bottom-right {
+        @top {
+            content: flow(part-header);
+        }
+        @bottom {
             content: counter(page)
         }
     }
@@ -27,11 +30,7 @@
     }
 
     /* General styles*/
-    body{
-        font-family:Times;
-    }
     h1,h2,h3,h4,h5,h6{
-        font-family:Calibri;
         page-break-after:avoid;
         page-break-inside:avoid;
     }
@@ -89,27 +88,14 @@
         content: leader('.') target-counter(attr(href), page) !important;
     }
 
-    /* Anthologies */
-    .pmb-anthology-wrapper{
-        break-before:left;
-    }
-    .pmb-anthology h1.pmb-title{
-        font-size:5em;
-    }
-
-    /* volumes */
-    .pmb-volume-wrapper{
-        break-before:right;
-    }
-    .pmb-anthology h1.pmb-title{
-        font-size:3em;
-    }
     /* parts */
     .pmb-part-wrapper{
         break-before:page;
     }
+    /* Hide part titles, but we'll use them in the TOC and margins. */
     .pmb-part h1.pmb-title{
-        font-size:2em;
+        /*display:none;*/
+        -prince-flow:static(part-header);
     }
 
     .pmb-article h1.pmb-title{
