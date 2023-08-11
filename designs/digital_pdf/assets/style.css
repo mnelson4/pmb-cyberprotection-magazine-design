@@ -60,7 +60,7 @@
     .pmb-toc-list li{
         list-style:none;
     }
-    .pmb-toc-item.pmb-toc-height-3{
+    /*.pmb-toc-item.pmb-toc-height-3{
         font-size:2em;
         font-weight:bold;
         margin-top:20px;
@@ -68,7 +68,7 @@
     }
     .pmb-toc-item.pmb-toc-height-2{
         font-size:1.5em;
-        border-bottom:1px solid black;
+        border-bottom:1px solid #2c2c2c;
         margin-top:1em;
     }
     .pmb-toc-item.pmb-toc-height-1{
@@ -83,12 +83,20 @@
     }
     .pmb-toc-item.pmb-toc-depth-1{
         margin-left:1em;
+    }*/
+
+    .pmb-toc-item{
+        display:inline;
+
     }
-    .pmb-toc-list .pmb-toc-item.pmb-toc-front a::after {
-        content: leader('.') target-counter(attr(href), page, lower-roman) !important;
+
+    .pmb-toc-item.pmb-toc-depth-0 a{
+        border-bottom:2px solid rgb(18,62,122);
+        padding-left:100px;
     }
-    .pmb-toc-list .pmb-toc-item:not(.pmb-toc-front) a::after {
-        content: leader('.') target-counter(attr(href), page) !important;
+
+    .pmb-toc-list .pmb-toc-item a::before {
+        content: target-counter(attr(href), page) !important;
     }
 
     /* parts */
