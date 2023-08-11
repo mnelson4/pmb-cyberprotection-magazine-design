@@ -47,12 +47,11 @@
         margin-top:-3vw;
     }
     .pmbcpm-title-page-cover-image-wrapper{
-        margin-top:0px;
+        margin-top:30px;
     }
-    .pmbcpm-title-page-cover-image{
-        /*width:100%;*/
-        /*height:100%;*/
-    }
+    /**
+    Sets maximum height of dynamic cover page
+     */
     .pmb-posts .pmb-dynamic-resize img{
         height:50px;
     }
