@@ -86,17 +86,18 @@
     }*/
 
     .pmb-toc-item{
-        display:inline;
-
+        display:block;
     }
-
+    .pmb-toc-item a{
+        padding-left:100px;
+    }
     .pmb-toc-item.pmb-toc-depth-0 a{
         border-bottom:2px solid rgb(18,62,122);
-        padding-left:100px;
+
     }
 
     .pmb-toc-list .pmb-toc-item a::before {
-        content: target-counter(attr(href), page) !important;
+        content: target-counter(attr(href), page) leader(' ') !important;
     }
 
     /* parts */
