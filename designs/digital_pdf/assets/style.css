@@ -152,6 +152,9 @@
     a.pmbcpm-toc-article-link:visited, a.pmbcpm-page-ref:visited::after {
         text-decoration: none;
     }
+    a{
+        text-decoration:none;
+    }
     .pmbcpm-toc-article-title-wrapper a{
         font-family: var(--pmb-header-font);
     }
