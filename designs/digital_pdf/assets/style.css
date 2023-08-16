@@ -13,10 +13,10 @@
             padding-top: 8pt;
         }
         @top {
-            content: flow(part-header);
+            content: flow(normal-header);
         }
         @bottom {
-            content: counter(page)
+            content: flow(normal-footer);
         }
     }
     @page title{
@@ -178,7 +178,25 @@
     /* Hide part titles, but we'll use them in the TOC and margins. */
     .pmbcpm-part-title-wrapper{
         /*display:none;*/
-        -prince-flow:static(part-header);
+        -prince-flow:static(normal-header);
+    }
+
+    #pmbcpm-footer-margin-wrap{
+        -prince-flow:static(normal-footer);
+    }
+    .pmbcpm-footer-margin{
+        text-align:center;
+        font-family: var(--pmb-header-font);
+    }
+    .pmbcpm-pagenum-wrapper{
+        margin-bottom:10px;
+        color:rgb(18,62,122);
+        font-size:2em;
+    }
+    .pmb-publication-data{
+        border-top:1px solid black;
+        padding-top:5px;
+        text-transform: uppercase;
     }
 
     .pmb-article h1.pmb-title{
