@@ -137,6 +137,7 @@
     .pmbcpm-toc-article-title-wrapper a.pmbcpm-page-ref{
         color:rgb(18,62,122);
         display:inline-block;/*Must be an inline block or else the ::after selector doesn't work on it when its empty*/
+        text-decoration: none;
     }
     .pmbcpm-toc-article-title-wrapper a.pmbcpm-page-ref::after{
         content: target-counter(attr(href), page) !important;
@@ -145,10 +146,10 @@
     .pmbcpm-toc-article-link{
         color:rgb(18,62,122);
     }
-    a.pmbcpm-toc-article-link:link, a.pmbcpm-page-ref:link::after{
+    a.pmbcpm-toc-article-link:link{
         text-decoration: none;
     }
-    a.pmbcpm-toc-article-link:visited, a.pmbcpm-page-ref:visited::after {
+    a.pmbcpm-toc-article-link:visited{
         text-decoration: none;
     }
     .pmbcpm-toc-article-title-wrapper a{
