@@ -85,25 +85,86 @@
         margin-left:1em;
     }*/
 
-    .pmb-toc-item{
+    /*.pmb-toc-item{
         display:block;
     }
+
     .pmb-toc-item a{
         padding-left:100px;
     }
+
     .pmb-toc-item.pmb-toc-depth-0 a{
         border-bottom:2px solid rgb(18,62,122);
-
     }
 
     .pmb-toc-list .pmb-toc-item a::before {
         content: target-counter(attr(href), page) leader(' ') !important;
+    }*/
+    /*.pmbcpm-toc-part-title-wrapper{*/
+
+    /*}*/
+    /*.pmbcpm-toc-part-title{*/
+    /*    text-transform:uppercase;*/
+    /*    color: rgb(138,150,157);*/
+    /*    display:inline;*/
+    /*    border-bottom:2px solid rgb(18,62,122);*/
+    /*    padding-left:100px;*/
+    /*}*/
+    /*.pmbcpm-toc-article-link::before{*/
+    /*
+    /*}*/
+    .pmb-toc-list{
+        display:table;
+    }
+    .pmb-toc-list>div{
+        display:table-row;
+    }
+    .pmbcpm-toc-part-title-wrapper{
+        text-transform:uppercase;
+        color: rgb(138,150,157);
+    }
+    .pmbcpm-toc-part-title-cell{
+        padding-top:20px;
+        font-family: var(--pmb-header-font);
+    }
+     .pmbcpm-toc-part-title-wrapper .pmbcpm-part-underline{
+        border-bottom:2px solid rgb(18,62,122);
+         padding-bottom:5px;
+    }
+    .pmbcpm-first-item{
+        width:100px;
+    };
+    .pmbcpm-toc-article-title-wrapper .pmbcpm-page-ref::before{
+        content: target-counter(attr(href), page) !important;;
+        color:rgb(18,62,122);
+    }
+    .pmbcpm-toc-article-link{
+        color:rgb(18,62,122);
+    }
+    a.pmbcpm-toc-article-link:link {
+        text-decoration: none;
+    }
+    a.pmbcpm-toc-article-link:visited {
+        text-decoration: none;
+    }
+    .pmbcpm-toc-article-title-wrapper a{
+        font-family: var(--pmb-header-font);
     }
 
-    /* parts */
+    .pmbcpm-toc-excerpt{
+        margin-top:5px;
+        color:rgb(138,150,157);
+    }
+    .pmb-toc-list>div>div{
+        display:table-cell;
+        padding-bottom:15px;
+    }
+
+        /* parts */
     .pmb-part-wrapper{
         break-before:page;
     }
+
     /* Hide part titles, but we'll use them in the TOC and margins. */
     .pmb-part h1.pmb-title{
         /*display:none;*/

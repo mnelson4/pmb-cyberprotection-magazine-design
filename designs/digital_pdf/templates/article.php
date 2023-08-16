@@ -12,6 +12,7 @@
 				<?php pmb_the_title();?>
             </div><!-- .entry-header-inner -->
         </header><!-- .entry-header -->
+        <div class="excerpt"><?php the_excerpt();?></div>
 		<?php pmb_include_design_template( 'partials/content' ); ?>
     </article>
 <?php // end of file. For some reason this comment was needed to prevent a fatal parsing error on dev.printmy.blog
