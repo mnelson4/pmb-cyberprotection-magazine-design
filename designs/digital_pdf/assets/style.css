@@ -136,6 +136,7 @@
     };
     .pmbcpm-toc-article-title-wrapper a.pmbcpm-page-ref{
         color:rgb(18,62,122);
+        display:inline-block;/*Must be an inline block or else the ::after selector doesn't work on it when its empty*/
     }
     .pmbcpm-toc-article-title-wrapper a.pmbcpm-page-ref::after{
         content: target-counter(attr(href), page) !important;
