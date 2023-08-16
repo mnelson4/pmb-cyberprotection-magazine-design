@@ -184,6 +184,9 @@
     #pmbcpm-footer-margin-wrap{
         -prince-flow:static(normal-footer);
     }
+    .pmbcpm-footer-margin-wrap{
+        font-size:0.5em;
+    }
     .pmbcpm-footer-margin{
         text-align:center;
         font-family: var(--pmb-header-font);
@@ -197,6 +200,9 @@
         border-top:1px solid black;
         padding-top:5px;
         text-transform: uppercase;
+    }
+    .pmb-page-number::after {
+        content: counter(page);
     }
 
     .pmb-article h1.pmb-title{

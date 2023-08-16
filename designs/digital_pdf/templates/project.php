@@ -16,7 +16,7 @@ echo str_replace('has-sidebar', '', implode(' ', get_body_class('pmb-print-page 
 <div class="pmbcpm-footer-margin-wrap" id="pmbcpm-footer-margin-wrap">
     <div id="pmbcpm-footer-margin" class="pmbcpm-footer-margin">
         <div class="pmbcpm-pagenum-wrapper">
-            <span class="pmb-page-number">3</span>
+            <span class="pmb-page-number"></span>
         </div>
         <div class="pmbcpm-publication-data-wrapper" >
             <span class="pmb-publication-data">
