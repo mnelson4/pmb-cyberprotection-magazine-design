@@ -119,16 +119,16 @@
     .pmb-toc-list>div{
         display:table-row;
     }
-    .pmbcpm-toc-part-title-wrapper{
+    .pmbcpm-toc-part-title-wrapper, .pmbcpm-part-title{
         text-transform:uppercase;
         color: rgb(138,150,157);
+        font-family: var(--pmb-header-font);
     }
     .pmbcpm-toc-part-title-cell{
         padding-top:20px;
-        font-family: var(--pmb-header-font);
     }
-     .pmbcpm-toc-part-title-wrapper .pmbcpm-part-underline{
-        border-bottom:2px solid rgb(18,62,122);
+     .pmbcpm-part-underline{
+         border-bottom:2px solid rgb(18,62,122);
          padding-bottom:5px;
     }
     .pmbcpm-first-item{
@@ -176,7 +176,7 @@
     }
 
     /* Hide part titles, but we'll use them in the TOC and margins. */
-    .pmb-part h1.pmb-title{
+    .pmbcpm-part-title-wrapper{
         /*display:none;*/
         -prince-flow:static(part-header);
     }
