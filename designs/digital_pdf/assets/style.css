@@ -145,10 +145,10 @@
     .pmbcpm-toc-article-link{
         color:rgb(18,62,122);
     }
-    a.pmbcpm-toc-article-link:link, a.pmbcpm-page-ref::after:link {
+    a.pmbcpm-toc-article-link:link, a.pmbcpm-page-ref:link::after{
         text-decoration: none;
     }
-    a.pmbcpm-toc-article-link:visited, a.pmbcpm-page-ref::after:visited {
+    a.pmbcpm-toc-article-link:visited, a.pmbcpm-page-ref:visited::after {
         text-decoration: none;
     }
     .pmbcpm-toc-article-title-wrapper a{
