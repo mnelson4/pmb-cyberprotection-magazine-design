@@ -134,8 +134,8 @@
     .pmbcpm-first-item{
         width:100px;
     };
-    .pmbcpm-toc-article-title-wrapper .pmbcpm-page-ref::before{
-        content: target-counter(attr(href), page) !important;;
+    .pmbcpm-toc-article-title-wrapper .pmbcpm-page-ref::after{
+        content: target-counter(attr(href), page) !important;
         color:rgb(18,62,122);
     }
     .pmbcpm-toc-article-link{
