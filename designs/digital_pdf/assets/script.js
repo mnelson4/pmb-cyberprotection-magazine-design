@@ -18,7 +18,7 @@ jQuery(document).on('pmb_doc_conversion_requested', function(){
             } else {
                 var excerpt_text = '';
             }
-            return '<div class="pmbcpm-toc-article-title-wrapper"><div class="pmbcpm-first-item"><a href="#' + href_id + '" class="pmbcpm-page-ref"></a></div><div class="pmbcpm-toc-article"><a href="#' + href_id + '" class="pmbcpm-toc-article-link">'+title_text+'</a>'+excerpt_text+'</div>'
+            return '<div class="pmbcpm-toc-article-title-wrapper"><div class="pmbcpm-first-item"><a href="#' + href_id + '" class="pmbcpm-page-ref">&nbsp;</a></div><div class="pmbcpm-toc-article"><a href="#' + href_id + '" class="pmbcpm-toc-article-link">'+title_text+'</a>'+excerpt_text+'</div>'
         }
     });
     jQuery(document).on('pmb_done_processing_videos', function() {
