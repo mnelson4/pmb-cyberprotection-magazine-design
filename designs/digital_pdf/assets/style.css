@@ -139,6 +139,10 @@
         display:inline-block;/*Must be an inline block or else the ::after selector doesn't work on it when its empty*/
         text-decoration: none;
     }
+    /* The above should remove the underline from the TOC page reference links, but doesn't in Prince (did in Firefox). This was needed.*/
+    a{
+        text-decoration:none;
+    }
     .pmbcpm-toc-article-title-wrapper a.pmbcpm-page-ref::after{
         content: target-counter(attr(href), page) !important;
         color:rgb(18,62,122);
@@ -152,9 +156,7 @@
     a.pmbcpm-toc-article-link:visited, a.pmbcpm-page-ref:visited::after {
         text-decoration: none;
     }
-    a{
-        text-decoration:none;
-    }
+
     .pmbcpm-toc-article-title-wrapper a{
         font-family: var(--pmb-header-font);
     }
