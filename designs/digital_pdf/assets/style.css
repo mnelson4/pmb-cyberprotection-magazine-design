@@ -140,14 +140,15 @@
     }
     .pmbcpm-toc-article-title-wrapper a.pmbcpm-page-ref::after{
         content: target-counter(attr(href), page) !important;
+        color:rgb(18,62,122);
     }
     .pmbcpm-toc-article-link{
         color:rgb(18,62,122);
     }
-    a.pmbcpm-toc-article-link:link {
+    a.pmbcpm-toc-article-link:link, a.pmbcpm-page-ref::after:link {
         text-decoration: none;
     }
-    a.pmbcpm-toc-article-link:visited {
+    a.pmbcpm-toc-article-link:visited, a.pmbcpm-page-ref::after:visited {
         text-decoration: none;
     }
     .pmbcpm-toc-article-title-wrapper a{
