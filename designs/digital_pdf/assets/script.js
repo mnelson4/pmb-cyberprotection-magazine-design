@@ -12,7 +12,7 @@ jQuery(document).on('pmb_doc_conversion_requested', function(){
             return '<div class="pmbcpm-toc-part-title-wrapper"><div class="pmbcpm-first-item"><div class="pmbcpm-part-underline">&nbsp;</div></div><div class="pmbcpm-toc-part-title-cell"><span class="pmbcpm-toc-part-title pmbcpm-part-underline">' + title_text+ '</span></div>';
         } else {
             // article
-            var excerpt = jq_selection.find('.excerpt');
+            var excerpt = jq_selection.find('.pmbcpm-subtitle h2');
             if(excerpt.length !== 0){
                 var excerpt_text = '<p class="pmbcpm-toc-excerpt">' + excerpt.text() + '</p>';
             } else {
