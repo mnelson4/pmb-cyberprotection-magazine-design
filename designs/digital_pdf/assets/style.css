@@ -176,6 +176,11 @@
         column-gap:20px;
     }
 
+    .entry-header, .pmb-wide{
+        column-span:all;
+    }
+    
+
     /* Justify content looks way better when there are columns */
     article:not(.pmb-just-content) div.entry-content p:not(.has-text-align-center, .has-text-align-right),
     article:not(.pmb-just-content) div.entry-content li {
