@@ -24,15 +24,14 @@
                     <b>Author: <?php echo do_shortcode('[molongui_author_name]');?></b>
                 </div>
             </div><!-- .entry-header-inner -->
+            <figure class="post-thumbnail <?php esc_attr_e($featured_image_class);?>">
+                <?php the_post_thumbnail('full', ['class' => 'alignnone pmb-featured-image','loading' => 'eager']); ?>
+                <?php if (wp_get_attachment_caption(get_post_thumbnail_id())) : ?>
+                    <figcaption
+                            class="wp-caption-text"><?php echo wp_kses_post(wp_get_attachment_caption(get_post_thumbnail_id())); ?></figcaption>
+                <?php endif; ?>
+            </figure>
         </header><!-- .entry-header -->
-        <figure class="post-thumbnail <?php esc_attr_e($featured_image_class);?>">
-            <?php the_post_thumbnail('full', ['class' => 'alignnone pmb-featured-image','loading' => 'eager']); ?>
-            <?php if (wp_get_attachment_caption(get_post_thumbnail_id())) : ?>
-                <figcaption
-                    class="wp-caption-text"><?php echo wp_kses_post(wp_get_attachment_caption(get_post_thumbnail_id())); ?></figcaption>
-            <?php endif; ?>
-        </figure>
-
         <?php pmb_include_design_template( 'partials/content' ); ?>
     </article>
 <?php // end of file. For some reason this comment was needed to prevent a fatal parsing error on dev.printmy.blog

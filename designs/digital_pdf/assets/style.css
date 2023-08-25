@@ -179,8 +179,8 @@
     .byline-wrapper{
         text-align:center;
     }
-    /* Article column stuff */
 
+    /* Article column stuff */
     .pmb-front-matter, .pmb-main-matter, .pmb-back-matter{
         columns:2;
         column-rule: 1px solid black;
@@ -207,19 +207,30 @@
     ul, ol {
         padding-left: 1em;
     }
+    /* Heading */
+    .entry-header{
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+    .entry-header .post-thumbnail{
+        margin-top:30px;
+    }
 
-    /* Featuerd images */
+        /* Featuerd images */
     .post-thumbnail{
         column-span:all;
     }
     .post-thumbnail>img{
-        width:100%;
+        width:auto%;
     }
     .post-thumbnail.top{
         height:40vh;
         -prince-float:top page;
     }
-    .post-thumbnail.top>*{
+    .post-thumbnail.middle{
+        height:30vh;
+    }
+    .post-thumbnail.top>*, .post-thumbnail.middle>*{
         max-height:100%;
         width:auto;
         margin-left:auto;
