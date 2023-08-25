@@ -21,10 +21,20 @@ jQuery(document).on('pmb_doc_conversion_requested', function(){
             return '<div class="pmbcpm-toc-article-title-wrapper"><div class="pmbcpm-first-item"><a href="#' + href_id + '" class="pmbcpm-page-ref"></a></div><div class="pmbcpm-toc-article"><a href="#' + href_id + '" class="pmbcpm-toc-article-link">'+title_text+'</a>'+excerpt_text+'</div>'
         }
     });
+    pmbcpm_add_end_icons();
     jQuery(document).on('pmb_done_processing_videos', function() {
         //pmb_resize_images(400);
         jQuery(document).trigger('pmb_doc_conversion_ready');
     });
     pmb_convert_youtube_videos_to_images();
 });
+
+function pmbcpm_add_end_icons(){
+    // jQuery('<b>stuff</b>').appendTo('.entry-content>p:last-of-type');
+    jQuery('.entry-content>p:last-of-type').each(function(index, element){
+        var html = jQuery(element).html();
+        html += '<img src=" ' + pmb_design_options.article_end_icon + '" class="pmbcpm-article-end-icon">';
+        jQuery(element).html(html);
+    })
+}
 

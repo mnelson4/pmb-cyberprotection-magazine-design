@@ -19,6 +19,8 @@ use Twine\forms\strategies\validation\TextValidation;
 
 define('PMBCPM_MAIN_FILE', __FILE__);
 define('PMBCPM_MAIN_DIR', __DIR__);
+define('PMBCPM_DESIGN_DIR', PMBCPM_MAIN_DIR . '/designs/digital_pdf');
+define('PMBCPM_TEMPLATES_DIR', PMBCPM_DESIGN_DIR . '/templates');
 add_action( 'pmb_register_designs', 'pmbcpm_register_design', 1 );
 register_activation_hook(PMBCPM_MAIN_FILE,'pmbcpm_activation');
 
@@ -44,7 +46,7 @@ function pmbcpm_register_design() {
             return [
                 'title' => __('Cyber Protection Magazine Digital PDF'),
                 'format' => 'digital_pdf',
-                'dir' => PMBCPM_MAIN_DIR . '/designs/digital_pdf/',
+                'dir' => PMBCPM_DESIGN_DIR,
                 'default' => 'cyber_protection_digital',
                 'url' => plugins_url('designs/digital_pdf/', PMBCPM_MAIN_FILE),
 //                'docs' => '',
@@ -52,12 +54,9 @@ function pmbcpm_register_design() {
                     'front_matter',
                     'back_matter',
                     'part',
-                    'volume',
-                    'anthology'
                 ],
                 'custom_templates' => [
                     'just_content',
-                    'center_content'
                 ],
                 'design_form_callback' => function () {
                     $icon = get_site_icon_url();
@@ -117,6 +116,30 @@ function pmbcpm_register_design() {
                         ]
                     ]);
                 }
+            ];
+        }
+    );
+    pmb_register_section_template(
+        'featured_image_top',
+        [
+            'cyber_protection_digital'
+        ],
+        function(){
+            return [
+                'title' => __('Featured Image on Top', 'print-my-blog'),
+                'filepath' => PMBCPM_TEMPLATES_DIR . '/featured_image_at_top.php'
+            ];
+        }
+    );
+    pmb_register_section_template(
+        'featured_image_bottom',
+        [
+            'cyber_protection_digital'
+        ],
+        function(){
+            return [
+                'title' => __('Featured Image at Bottom', 'print-my-blog'),
+                'filepath' => PMBCPM_TEMPLATES_DIR . '/featured_image_at_bottom.php'
             ];
         }
     );

@@ -170,6 +170,11 @@
         font-family:var(--pmb-main-font);
     }
 
+    .byline-wrapper{
+        text-align:center;
+    }
+    /* Article column stuff */
+
     .pmb-front-matter, .pmb-main-matter, .pmb-back-matter{
         columns:2;
         column-rule: 1px solid black;
@@ -179,7 +184,7 @@
     .entry-header, .pmb-wide{
         column-span:all;
     }
-    
+
 
     /* Justify content looks way better when there are columns */
     article:not(.pmb-just-content) div.entry-content p:not(.has-text-align-center, .has-text-align-right),
@@ -197,11 +202,36 @@
         padding-left: 1em;
     }
 
+    /* Featuerd images */
+    .post-thumbnail{
+        column-span:all;
+    }
+    .post-thumbnail>img{
+        width:100%;
+    }
+    .post-thumbnail.top{
+        -prince-float: top;
+    }
+    .post-thumbnail.bottom{
+        -prince-float: bottom;
+        width:calc(100% + 50px);
+        margin-left:-50px;
+        margin-bottom:-50px;
+        
+    }
+
+
+
     /* miscellaneous */
     .pmb-posts span.pmb-footnote{
         float:footnote;
         text-align:left;
         margin-left:0;
         font-weight:normal;
+    }
+
+    .pmbcpm-article-end-icon{
+        width:1em;
+        float:right;
     }
 }

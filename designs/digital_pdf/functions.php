@@ -28,7 +28,8 @@ function pmb_enqueue_easy_script(){
         'pmb_design_options',
         [
             'internal_footnote_text' => $pmb_design->getSetting('internal_footnote_text'),
-            'external_footnote_text' => $pmb_design->getSetting('footnote_text')
+            'external_footnote_text' => $pmb_design->getSetting('footnote_text'),
+            'article_end_icon' => $pmb_design->getSetting('article_ending_icon'),
         ]
     );
 }
