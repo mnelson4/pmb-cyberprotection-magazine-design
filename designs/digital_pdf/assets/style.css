@@ -229,6 +229,7 @@
         height:40vh;
         -prince-float:top page;
         margin-top:0;
+        margin-bottom:0;
     }
     .post-thumbnail.middle{
         height:30vh;
