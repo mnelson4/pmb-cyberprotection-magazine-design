@@ -212,7 +212,7 @@
         margin-top:30px;
         margin-bottom:30px;
     }
-    .entry-header .post-thumbnail{
+    .entry-header.middle .post-thumbnail{
         margin-top:30px;
     }
 
@@ -236,12 +236,25 @@
         margin-left:auto;
         margin-right:auto;
     }
-    .post-thumbnail.bottom{
+    .post-thumbnail.bottom {
         -prince-float: bottom;
-        width:calc(100% + 50px);
-        margin-left:-50px;
-        margin-bottom:-50px;
+        width: auto;
+        margin-left: -200px;
+        margin-bottom: -200px;
 
+    }
+    .post-thumbnail.bottom>*{
+        height:100%;
+    }
+
+    .post-thumbnail.bottom>figcaption{
+        margin-top:-200px;
+        color:white;
+        font-weight:bold;
+    }
+    .post-thumbnail.bottom .pmbcpm-caption-span{
+        padding:5px;
+        background:rgba(255,255,255,0.5)
     }
 
 
