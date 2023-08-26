@@ -8,6 +8,7 @@
     .pmb-fullpage-no-margins{
         page: fullpage-no-margins;
         display:block;
+        column-span:all;
     }
     @page main {
         counter-reset: footnote;
