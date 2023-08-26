@@ -5,7 +5,7 @@
  * @var string $featured_image_class
  */
 ?>
-<div <?php pmb_section_wrapper_class();?> <?php pmb_section_wrapper_id();?>>
+<div <?php pmb_section_wrapper_class($featured_image_class . '-featured-image');?> <?php pmb_section_wrapper_id();?>>
     <article <?php pmb_section_class(); ?> <?php pmb_section_id(); ?>>
         <header class="entry-header has-text-align-center">
             <div class="entry-header-inner section-inner medium">

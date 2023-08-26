@@ -168,6 +168,7 @@
         font-size:4em;
         color:var(--primary-font-color);
         margin-bottom:10px;
+        margin-top:0;
     }
     .pmbcpm-subtitle h2{
         font-size:1.8em;
@@ -212,9 +213,6 @@
         margin-top:30px;
         margin-bottom:30px;
     }
-    .entry-header .entry-header-inner{
-        margin-bottom:30px;
-    }
     .entry-header.middle .post-thumbnail{
         margin-top:30px;
     }
@@ -222,6 +220,7 @@
         /* Featuerd images */
     .post-thumbnail{
         column-span:all;
+        margin-top:30px;
     }
     .post-thumbnail>img{
         width:auto;
@@ -229,6 +228,7 @@
     .post-thumbnail.top{
         height:40vh;
         -prince-float:top page;
+        margin-top:0;
     }
     .post-thumbnail.middle{
         height:30vh;
