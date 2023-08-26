@@ -21,7 +21,15 @@
                 }
                 ?>
                 <div class="byline-wrapper">
-                    <b>Author: <?php echo do_shortcode('[molongui_author_name]');?></b>
+                    <?php echo strtoupper(sprintf( __('%1$sAuthor:%2$s %3$s', 'print-my-blog'), '<b>', '</b>', do_shortcode('[molongui_author_name]')));?>
+                    <?php
+                    $photo_credit = get_post_meta(get_the_ID(), 'pmb_photo_credit', true);
+                    if($photo_credit){
+                        ?>&nbsp;.&nbsp;
+                        <?php
+                        echo strtoupper(sprintf(__('%1$sPhoto:%2$s %3$s', 'print-my-blog'), '<b>' , '</b>', esc_html($photo_credit)));
+                    }
+                    ?>
                 </div>
             </div><!-- .entry-header-inner -->
             <figure class="post-thumbnail <?php esc_attr_e($featured_image_class);?>">

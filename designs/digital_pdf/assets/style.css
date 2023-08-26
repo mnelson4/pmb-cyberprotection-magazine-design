@@ -212,6 +212,9 @@
         margin-top:30px;
         margin-bottom:30px;
     }
+    .entry-header .entry-header-inner{
+        margin-bottom:30px;
+    }
     .entry-header.middle .post-thumbnail{
         margin-top:30px;
     }
