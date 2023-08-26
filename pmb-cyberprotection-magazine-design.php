@@ -143,6 +143,18 @@ function pmbcpm_register_design() {
             ];
         }
     );
+    pmb_register_section_template(
+        'fullpage_no_margins',
+        [
+            'cyber_protection_digital'
+        ],
+        function(){
+            return [
+                'title' => __('Fullpage No Margins', 'print-my-blog'),
+                'filepath' => PMBCPM_TEMPLATES_DIR . '/fullpage_no_margins.php'
+            ];
+        }
+    );
     pmb_register_design(
         'cyber_protection_digital',
     'cyber_protection_digital',

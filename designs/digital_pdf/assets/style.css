@@ -5,6 +5,10 @@
         page: main;
         counter-reset: page 1
     }
+    .pmb-fullpage-no-margins{
+        page: fullpage-no-margins;
+        display:block;
+    }
     @page main {
         counter-reset: footnote;
 
@@ -17,6 +21,12 @@
         }
         @bottom {
             content: flow(normal-footer);
+        }
+    }
+    @page fullpage-no-margins{
+        margin:0;
+        @top {
+            padding-top:0;
         }
     }
     @page{
@@ -260,6 +270,8 @@
         background:rgba(255,255,255,0.5)
     }
 
+    /* Fullpage no margins*/
+    pmbcpm-no-margins
 
 
     /* miscellaneous */
