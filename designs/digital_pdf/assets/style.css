@@ -221,7 +221,7 @@
         column-span:all;
     }
     .post-thumbnail>img{
-        width:auto%;
+        width:auto;
     }
     .post-thumbnail.top{
         height:40vh;
@@ -248,7 +248,7 @@
     }
 
     .post-thumbnail.bottom>figcaption{
-        margin-top:-200px;=
+        margin-top:-200px;
     }
     .post-thumbnail.bottom .pmbcpm-caption-span{
         padding:5px;
