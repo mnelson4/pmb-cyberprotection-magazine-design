@@ -239,16 +239,17 @@
     .post-thumbnail.bottom {
         -prince-float: bottom;
         width: auto;
-        margin-left: -200px;
-        margin-bottom: -200px;
-        height:40vh;
+        /*margin-left: -200px;*/
+        /*margin-bottom: -200px;*/
+        height:30vh;
     }
     .post-thumbnail.bottom>*{
-        height:calc(100% + 200px);
+        height:100%;
+        /*height:calc(100% + 200px);*/
     }
 
     .post-thumbnail.bottom>figcaption{
-        margin-top:-200px;
+        margin-top:-30px;
     }
     .post-thumbnail.bottom .pmbcpm-caption-span{
         padding:5px;
