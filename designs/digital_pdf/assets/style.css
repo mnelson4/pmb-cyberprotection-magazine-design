@@ -241,10 +241,10 @@
         width: auto;
         margin-left: -200px;
         margin-bottom: -200px;
-
+        height:40vh;
     }
     .post-thumbnail.bottom>*{
-        height:100%;
+        height:calc(100% + 200px);
     }
 
     .post-thumbnail.bottom>figcaption{
