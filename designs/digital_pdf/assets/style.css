@@ -49,7 +49,7 @@
         page-break-after:avoid;
         page-break-inside:avoid;
     }
-    h2, h3, h4, h5, h6{
+    .pmb-posts h2, h3, h4, h5, h6{
         text-transform: uppercase;
         font-size: 1em;
         font-weight: 100;
