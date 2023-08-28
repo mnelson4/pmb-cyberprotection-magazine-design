@@ -49,6 +49,21 @@
         page-break-after:avoid;
         page-break-inside:avoid;
     }
+    h2, h3, h4, h5, h6{
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 100;
+        border-top: 1px solid gray;
+        display: inline-block;
+        padding-top: 10px;
+    }
+    h3{
+        font-size:.7em;
+    }
+    h4{
+        border-top:unset;
+        padding-top:unset;
+    }
 
     .pmb-main-matter {
         display: block;
@@ -194,7 +209,7 @@
     /* Article column stuff */
     .pmb-front-matter, .pmb-main-matter, .pmb-back-matter{
         columns:2;
-        column-rule: 1px solid black;
+        column-rule: 1px solid gray;
         column-gap:20px;
     }
 
