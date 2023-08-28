@@ -32,13 +32,15 @@
                     ?>
                 </div>
             </div><!-- .entry-header-inner -->
-            <figure class="post-thumbnail <?php esc_attr_e($featured_image_class);?>">
-                <?php the_post_thumbnail('full', ['class' => 'alignnone pmb-featured-image','loading' => 'eager']); ?>
-                <?php if (wp_get_attachment_caption(get_post_thumbnail_id())) : ?>
-                    <figcaption
-                            class="wp-caption-text"><span class="pmbcpm-caption-span"><?php echo wp_kses_post(wp_get_attachment_caption(get_post_thumbnail_id())); ?></span></figcaption>
-                <?php endif; ?>
-            </figure>
+            <?php if(has_post_thumbnail(get_the_ID())){ ?>
+                <figure class="post-thumbnail <?php esc_attr_e($featured_image_class);?>">
+                    <?php the_post_thumbnail('full', ['class' => 'alignnone pmb-featured-image','loading' => 'eager']); ?>
+                    <?php if (wp_get_attachment_caption(get_post_thumbnail_id())) : ?>
+                        <figcaption
+                                class="wp-caption-text"><span class="pmbcpm-caption-span"><?php echo wp_kses_post(wp_get_attachment_caption(get_post_thumbnail_id())); ?></span></figcaption>
+                    <?php endif; ?>
+                </figure>
+            <?php } ?>
         </header><!-- .entry-header -->
         <?php pmb_include_design_template( 'partials/content' ); ?>
         <?php pmb_include_design_template( 'partials/author_bio' ); ?>
