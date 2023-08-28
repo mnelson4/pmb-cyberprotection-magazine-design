@@ -1,15 +1,8 @@
 /* pagination */
 @media print, screen {
-    .pmb-main-matter {
-        display: block;
-        page: main;
-        counter-reset: page 1
-    }
-    .pmb-fullpage-no-margins{
-        page: fullpage-no-margins;
-        display:block;
-        column-span:all;
-    }
+
+
+
     @page main {
         counter-reset: footnote;
 
@@ -55,6 +48,12 @@
     h1,h2,h3,h4,h5,h6{
         page-break-after:avoid;
         page-break-inside:avoid;
+    }
+
+    .pmb-main-matter {
+        display: block;
+        page: main;
+        counter-reset: page 1
     }
 
     /* title page */
@@ -199,6 +198,7 @@
         column-gap:20px;
     }
 
+
     .entry-header, .pmb-wide{
         column-span:all;
     }
@@ -271,11 +271,45 @@
         background:rgba(255,255,255,0.5)
     }
 
+    /* Author bio */
+    .pmbcpm-author-bio-wrapper{
+        -prince-float:bottom column;
+    }
+    .pmbcpm-author-bio{
+        background-color:rgb(222,228,233);
+        margin-left:50px;
+        position:relative;
+        padding:5px;
+    }
+    .pmbcpm-author-bio-text{
+        margin-left:75px;
+    }
+    .pmbcpm-author-avatar-wrapper{
+        position:absolute;
+        left:-50px;
+        top:25%;
+        display:inline-block;
+        background-color:white;
+        padding:5px;
+    }
+    .pmbcpm-author-avatar{
+        width:100px;
+    }
+
+
     /* Fullpage no margins*/
-    pmbcpm-no-margins
+    .pmb-fullpage-no-margins img, .pmb-fullpage-no-margins div.wp-caption{
+        max-height:100pvh;
+    }
+
 
 
     /* miscellaneous */
+    .pmb-fullpage-no-margins{
+        page: fullpage-no-margins;
+        display:block;
+        column-span:all;
+    }
     .pmb-posts span.pmb-footnote{
         float:footnote;
         text-align:left;
