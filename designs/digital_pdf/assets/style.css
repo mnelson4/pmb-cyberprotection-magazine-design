@@ -304,6 +304,7 @@
         margin-left:50px;
         position:relative;
         padding:5px;
+        min-height:150px;
     }
     .pmbcpm-author-bio-text{
         margin-left:75px;
@@ -316,8 +317,9 @@
         background-color:white;
         padding:5px;
     }
-    .pmbcpm-author-avatar{
+    .pmbcpm-author-avatar-wrapper>img{
         width:100px;
+        height:auto;
     }
 
 

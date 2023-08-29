@@ -43,6 +43,10 @@
             <?php } ?>
         </header><!-- .entry-header -->
         <?php pmb_include_design_template( 'partials/content' ); ?>
-        <?php pmb_include_design_template( 'partials/author_bio' ); ?>
+        <?php
+        if(! get_post_meta(get_the_ID(), 'pmb_hide_author_bio', true)){
+            pmb_include_design_template( 'partials/author_bio' );
+        }
+        ?>
     </article>
 <?php // end of file. For some reason this comment was needed to prevent a fatal parsing error on dev.printmy.blog
