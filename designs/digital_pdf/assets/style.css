@@ -164,7 +164,7 @@
     }
 
         /* parts */
-    .pmb-part-wrapper{
+    .pmb-front_matter_article-wrapper, .pmb-back_matter_article-wrapper, .pmb-article-wrapper:not(:first-of-type){
         break-before:page;
     }
 
@@ -242,6 +242,7 @@
     /* Because we're in columns, save a bit of space by decreasing the indent on lists.*/
     ul, ol {
         padding-left: 1em;
+        margin-left:0.5em;
     }
     /* Heading */
     .entry-header{

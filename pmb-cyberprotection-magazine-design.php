@@ -86,7 +86,8 @@ function pmbcpm_register_design() {
                                     'html_help_text' => __('Icon that appears inline with text at the end of each article.', 'print-my-blog'),
                                     'default' => $icon
                                 ]),
-                                'fonts' => $default_design_templates->getPdfFontSettings()
+                                'fonts' => $default_design_templates->getPdfFontSettings(),
+                                'page' => $default_design_templates->getPageSubsection(),
                             ],
                     ]))->merge(pmb_generic_design_form());
                 },
