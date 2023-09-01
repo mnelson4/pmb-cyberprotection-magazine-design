@@ -17,10 +17,15 @@
             content: flow(normal-footer);
         }
     }
-    @page fullpage-no-margins{
+    @page fullpage-no-margins:first{
         margin:0;
         @top {
             padding-top:0;
+        }
+    }
+    @page featured-image-bottom{
+        @bottom{
+            content:none;
         }
     }
     @page{
@@ -32,9 +37,6 @@
     }
     @page title{
         margin:10px;
-        @bottom-right{
-            content:none;
-        }
     }
     body{
         prince-footnote-policy: keep-with-line;
@@ -163,8 +165,8 @@
         padding-bottom:15px;
     }
 
-        /* parts */
-    .pmb-front_matter_article-wrapper, .pmb-back_matter_article-wrapper, .pmb-article-wrapper:not(:first-of-type){
+    /* parts */
+    .pmb-front_matter_article-wrapper, .pmb-back_matter_article-wrapper, .pmb-article-wrapper:not(.pmb-part-wrapper:first-of-type .pmb-article-wrapper:first-of-type){
         break-before:page;
     }
 
@@ -279,13 +281,13 @@
     .post-thumbnail.bottom {
         -prince-float: bottom;
         width: auto;
-        /*margin-left: -200px;*/
-        /*margin-bottom: -200px;*/
+        margin-left: -200px;
+        margin-bottom: -200px;
         height:30vh;
     }
     .post-thumbnail.bottom>*{
         height:100%;
-        /*height:calc(100% + 200px);*/
+        height:calc(100% + 200px);
     }
 
     .post-thumbnail.bottom>figcaption{
@@ -294,6 +296,9 @@
     .post-thumbnail.bottom .pmbcpm-caption-span{
         padding:5px;
         background:rgba(255,255,255,0.5)
+    }
+    div.bottom-featured-image{
+        page:featured-image-bottom;
     }
 
     /* Author bio */
