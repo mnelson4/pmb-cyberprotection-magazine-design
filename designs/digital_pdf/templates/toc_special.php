@@ -41,7 +41,7 @@ if($image_src){
 
 
         <header class="entry-header has-text-align-center">
-            <h1 class="pmbcpm-toc-issue-h1">#<?php echo substr($pmb_project->getSetting( 'year'), 2);?>.<?php echo $pmb_project->getSetting('month');?></h1>
+            <h1 class="pmbcpm-toc-issue-h1"><?php echo $pmb_project->getSetting('month');?>.<?php echo substr($pmb_project->getSetting( 'year'), 2);?></h1>
         </header>
         <?php pmb_include_design_template( 'partials/content' ); ?>
     </article>
