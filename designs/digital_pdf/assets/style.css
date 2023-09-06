@@ -130,7 +130,7 @@
     .pmb-toc-list>div{
         display:table-row;
     }
-    .pmbcpm-toc-part-title-wrapper, .pmbcpm-part-title{
+    .pmbcpm-toc-part-title-wrapper, .pmbcpm-top-margin-title{
         text-transform:uppercase;
         color: var(--secondary-font-color);
         font-family: var(--pmb-header-font);
@@ -187,7 +187,7 @@
     }
 
     /* Hide part titles, but we'll use them in the TOC and margins. */
-    .pmbcpm-part-title-wrapper{
+    .pmbcpm-top-margin-title-wrapper{
         -prince-flow:static(normal-header);
     }
     .pmbcpm-toc-title-wrapper{
@@ -273,7 +273,7 @@
         margin-top:30px;
     }
 
-        /* Featuerd images */
+    /* Featuerd images */
     .post-thumbnail{
         column-span:all;
         margin-top:30px;
