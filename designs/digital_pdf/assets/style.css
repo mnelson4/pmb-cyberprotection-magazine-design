@@ -128,7 +128,7 @@
     }
     .pmbcpm-first-item{
         width:100px;
-    };
+    }
     .pmbcpm-toc-article-title-wrapper a.pmbcpm-page-ref{
         color:var(--primary-font-color);
         display:inline-block;/*Must be an inline block or else the ::after selector doesn't work on it when its empty*/
@@ -281,13 +281,13 @@
     .post-thumbnail.bottom {
         -prince-float: bottom;
         width: auto;
-        margin-left: -200px;
-        margin-bottom: -200px;
+        /*margin-left: -200px;*/
+        /*margin-bottom: -200px;*/
         height:30vh;
     }
     .post-thumbnail.bottom>*{
         height:100%;
-        height:calc(100% + 200px);
+        /*height:calc(100% + 200px);*/
     }
 
     .post-thumbnail.bottom>figcaption{
