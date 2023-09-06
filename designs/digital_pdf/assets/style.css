@@ -103,6 +103,13 @@
         height:50px;
     }
 
+    .pmbcpm-toc-issue-h1{
+        font-size:6em;
+        color:white;
+    }
+    .pmbcpm-toc-article-wrapper{
+        column-span:all;
+    }
     /* toc, if it were used */
     .pmb-toc-list li{
         list-style:none;
