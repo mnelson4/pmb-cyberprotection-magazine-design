@@ -156,6 +156,30 @@ function pmbcpm_register_design() {
             ];
         }
     );
+    pmb_register_section_template(
+        'toc',
+        [
+            'cyber_protection_digital'
+        ],
+        function(){
+            return [
+                'title' => __('Table of Contents', 'print-my-blog'),
+                'filepath' => PMBCPM_TEMPLATES_DIR . '/toc_special.php'
+            ];
+        }
+    );
+    pmb_register_section_template(
+        'editorial',
+        [
+            'cyber_protection_digital'
+        ],
+        function(){
+            return [
+                'title' => __('Editorial', 'print-my-blog'),
+                'filepath' => PMBCPM_TEMPLATES_DIR . '/editorial.php'
+            ];
+        }
+    );
     pmb_register_design(
         'cyber_protection_digital',
     'cyber_protection_digital',
