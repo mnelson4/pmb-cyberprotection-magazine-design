@@ -18,7 +18,10 @@
         }
     }
     @page toc{
-        content:flow(toc-header);
+        @top{
+            content:flow(toc-header);
+        }
+
     }
     @page fullpage-no-margins:first{
         margin:0;
