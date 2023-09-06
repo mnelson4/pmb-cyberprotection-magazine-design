@@ -3,7 +3,14 @@
  * @var \PrintMyBlog\orm\entities\Project $pmb_project
  * @var PrintMyBlog\orm\entities\Design $pmb_design
  * @var string $featured_image_class
+ * @var bool $show_author defaults to true
  */
+if(! isset($featured_image_class)){
+    $featured_image_class = 'middle';
+}
+if(! isset($show_author)){
+    $show_author = true;
+}
 ?>
 <div <?php pmb_section_wrapper_class($featured_image_class . '-featured-image');?> <?php pmb_section_wrapper_id();?>>
     <article <?php pmb_section_class(); ?> <?php pmb_section_id(); ?>>
@@ -19,6 +26,7 @@
                     </div>
                     <?php
                 }
+                if($show_author){
                 ?>
                 <div class="byline-wrapper">
                     <?php echo strtoupper(sprintf( __('%1$sAuthor:%2$s %3$s', 'print-my-blog'), '<b>', '</b>', do_shortcode('[molongui_author_name]')));?>
@@ -31,6 +39,9 @@
                     }
                     ?>
                 </div>
+                <?php
+                }
+                ?>
             </div><!-- .entry-header-inner -->
             <?php if(has_post_thumbnail(get_the_ID())){ ?>
                 <figure class="post-thumbnail <?php esc_attr_e($featured_image_class);?>">
@@ -44,7 +55,7 @@
         </header><!-- .entry-header -->
         <?php pmb_include_design_template( 'partials/content' ); ?>
         <?php
-        if(! get_post_meta(get_the_ID(), 'pmb_hide_author_bio', true)){
+        if($show_author){
             pmb_include_design_template( 'partials/author_bio' );
         }
         ?>
