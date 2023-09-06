@@ -37,6 +37,13 @@ if($image_src){
 ?>
 
 <div <?php pmb_section_wrapper_class('pmbcpm-toc-article-wrapper');?> <?php pmb_section_wrapper_id();?>>
+    <article <?php pmb_section_class('pmbcpm-toc-title-wrapper'); ?> <?php pmb_section_id(); ?>>
+        <header class="entry-header has-text-align-center">
+            <div class="entry-header-inner section-inner medium">
+                <span class="pmbcpm-part-title pmbcpm-toc-title pmb-title pmbcpm-part-underline"><?php _e('Content.Imprint', 'print-my-blog');?></span>
+            </div>
+        </header>
+    </article>
     <article <?php pmb_section_class('pmbcpm-toc-article'); ?> <?php pmb_section_id(); ?>>
 
 

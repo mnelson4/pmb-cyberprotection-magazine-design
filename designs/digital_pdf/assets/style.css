@@ -17,6 +17,9 @@
             content: flow(normal-footer);
         }
     }
+    @page toc{
+        content:flow(toc-header);
+    }
     @page fullpage-no-margins:first{
         margin:0;
         @top {
@@ -103,6 +106,9 @@
         height:50px;
     }
 
+    .pmbcpm-toc-article-wrapper{
+        page: toc;
+    }
     .pmbcpm-toc-issue-h1{
         font-size:6em;
         color:white;
@@ -179,8 +185,10 @@
 
     /* Hide part titles, but we'll use them in the TOC and margins. */
     .pmbcpm-part-title-wrapper{
-        /*display:none;*/
         -prince-flow:static(normal-header);
+    }
+    .pmbcpm-toc-title-wrapper{
+        -prince-flow:static(toc-header);
     }
 
     #pmbcpm-footer-margin-wrap{
