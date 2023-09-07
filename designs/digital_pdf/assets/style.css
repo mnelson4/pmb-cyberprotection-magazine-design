@@ -181,6 +181,19 @@
         padding-bottom:15px;
     }
 
+    .pmbcpm-toc-title-wrapper{
+        -prince-flow:static(toc-header);
+    }
+
+    .pmbcpm-toc-article-inner{
+        background-color:white;
+        padding:20px;
+        margin:40px;
+    }
+    .pmbcpm-toc-article header{
+        padding-left:40px;
+    }
+
     /* parts */
     .pmb-front_matter_article-wrapper, .pmb-back_matter_article-wrapper, .pmb-article-wrapper:not(.pmb-part-wrapper:first-of-type .pmb-article-wrapper:first-of-type){
         break-before:page;
@@ -190,9 +203,7 @@
     .pmbcpm-top-margin-title-wrapper{
         -prince-flow:static(normal-header);
     }
-    .pmbcpm-toc-title-wrapper{
-        -prince-flow:static(toc-header);
-    }
+
 
     #pmbcpm-footer-margin-wrap{
         -prince-flow:static(normal-footer);

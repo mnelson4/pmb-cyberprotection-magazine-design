@@ -45,11 +45,11 @@ if($image_src){
         </header>
     </div>
     <article <?php pmb_section_class('pmbcpm-toc-article'); ?> <?php pmb_section_id(); ?>>
-
-
-        <header class="entry-header has-text-align-center">
+        <header class="entry-header">
             <h1 class="pmbcpm-toc-issue-h1"><?php echo $pmb_project->getSetting('month');?>.<?php echo substr($pmb_project->getSetting( 'year'), 2);?></h1>
         </header>
-        <?php pmb_include_design_template( 'partials/content' ); ?>
+        <div class="pmbcpm-toc-article-inner">
+            <?php pmb_include_design_template( 'partials/content' ); ?>
+        </div>
     </article>
 <?php // doesn't close div because that's done in the closing template
