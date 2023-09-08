@@ -23,13 +23,13 @@
         }
 
     }
-    @page fullpage-no-margins:first{
+    @page fullpage-no-margins{
         margin:0;
         @top {
             padding-top:0;
         }
     }
-    @page featured-image-bottom{
+    @page featured-image-bottom:first{
         @bottom{
             content:none;
         }
