@@ -253,12 +253,6 @@
         column-gap:20px;
     }
 
-
-    .entry-header, .pmb-wide{
-        column-span:all;
-    }
-
-
     /* Justify content looks way better when there are columns */
     article:not(.pmb-just-content) div.entry-content p:not(.has-text-align-center, .has-text-align-right),
     article:not(.pmb-just-content) div.entry-content li {
@@ -270,11 +264,6 @@
         column-span: all;
     }
 
-    /* Because we're in columns, save a bit of space by decreasing the indent on lists.*/
-    ul, ol {
-        padding-left: 1em;
-        margin-left:0.5em;
-    }
     /* Heading */
     .entry-header{
         margin-top:30px;
@@ -328,6 +317,31 @@
     }
     div.bottom-featured-image{
         page:featured-image-bottom;
+    }
+
+    /* Main Content */
+
+    /* Because we're in columns, save a bit of space by decreasing the indent on lists.*/
+    ul, ol {
+        padding-left: 1em;
+        margin-left:0.5em;
+    }
+    .entry-header, .pmb-wide{
+        column-span:all;
+    }
+    blockquote{
+        font-size:2em;
+        color:var(--secondary-font-color);
+        font-family: var(--pmb-header-font)
+    }
+    blockquote p {
+        quotes: "“" "”" "‘" "’";
+    }
+    blockquote p::before {
+        content: '“';
+    }
+    blockquote p::after {
+        content: '\201D';
     }
 
     /* Author bio */
