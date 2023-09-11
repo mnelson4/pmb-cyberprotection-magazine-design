@@ -253,6 +253,23 @@
         column-gap:20px;
     }
 
+    .pmbcpm-qr-code-wrapper{
+        background-color: rgb(225 231 236);
+        padding:5px;
+        margin-top:5px;
+        display:flex;
+    }
+    .pmbcpm-qr-code{
+        display:inline-block;
+    }
+    .pmbcpm-full-article-link{
+        vertical-align:top;
+        padding-top:5px;
+        padding-left:10px;
+        margin-top:5px;
+        text-align:left;
+    }
+
     /* Justify content looks way better when there are columns */
     article:not(.pmb-just-content) div.entry-content p:not(.has-text-align-center, .has-text-align-right),
     article:not(.pmb-just-content) div.entry-content li {

@@ -5,6 +5,15 @@ jQuery(document).on('pmb_doc_conversion_requested', function(){
     jQuery('.pmbcpm-title-page-cover-image').each(function(index, element){
         pmb_set_image_dimension_attributes(element);
     });
+    jQuery('.pmbcpm-qr-code').each(function(){
+        new QRCode(
+            this,
+            {
+                text:this.attributes['data-url'].value,
+                height:64,
+                width:64
+            });
+    })
     //pmb_replace_internal_links_with_page_refs_and_footnotes('footnote', 'footnote', pmb_design_options['external_footnote_text'], pmb_design_options['internal_footnote_text']);
     new PmbToc(function(title_text, href_id, depth, height, matter_class, jq_selection){
         if(depth === 0 || depth === '0'){
