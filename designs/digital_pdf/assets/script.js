@@ -13,7 +13,7 @@ jQuery(document).on('pmb_doc_conversion_requested', function(){
                 height:64,
                 width:64
             });
-    })
+    });
     //pmb_replace_internal_links_with_page_refs_and_footnotes('footnote', 'footnote', pmb_design_options['external_footnote_text'], pmb_design_options['internal_footnote_text']);
     new PmbToc(function(title_text, href_id, depth, height, matter_class, jq_selection){
         if(depth === 0 || depth === '0'){
@@ -33,7 +33,12 @@ jQuery(document).on('pmb_doc_conversion_requested', function(){
     pmbcpm_add_end_icons();
     jQuery(document).on('pmb_done_processing_videos', function() {
         //pmb_resize_images(400);
-        jQuery(document).trigger('pmb_doc_conversion_ready');
+        setTimeout(
+            function(){
+                jQuery(document).trigger('pmb_doc_conversion_ready');
+            },
+            1000
+        );
     });
     pmb_convert_youtube_videos_to_images();
 });
