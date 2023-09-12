@@ -257,6 +257,7 @@
         /*background-color:rgb(222,228,233);*/
         padding:5px;
         margin-bottom:-5px;
+        float:left;
         /*display:flex;*/
         /*width:50%;*/
     }
