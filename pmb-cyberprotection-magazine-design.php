@@ -49,7 +49,7 @@ function pmbcpm_register_design() {
                 'dir' => PMBCPM_DESIGN_DIR,
                 'default' => 'cyber_protection_digital',
                 'url' => plugins_url('designs/digital_pdf/', PMBCPM_MAIN_FILE),
-//                'docs' => '',
+                'docs' => 'https://github.com/mnelson4/pmb-cyberprotection-magazine-design',
                 'supports' => [
                     'front_matter',
                     'back_matter',
