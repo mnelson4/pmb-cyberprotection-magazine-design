@@ -4,7 +4,7 @@ Plugin Name: Print My Blog - Cyberprotection Magazine Design
 Plugin URI: https://github.com/mnelson4/pmb-cyberprotection-magazine-design
 Description: Custom digital PDF design for Cyber Protection Magazine (https://cyberprotection-magazine.com)
 Author: Mike Nelson (Developer of Print My Blog)
-Version: 1.1.0
+Version: 1.1.1
 */
 
 use PrintMyBlog\entities\DesignTemplate;
