@@ -40,7 +40,7 @@ if($image_src){
     <div <?php pmb_section_class('pmbcpm-toc-title-wrapper'); ?> <?php pmb_section_id(); ?>>
         <header class="entry-header has-text-align-center">
             <div class="entry-header-inner section-inner medium">
-                <span class="pmbcpm-top-margin-title pmbcpm-toc-title pmb-title pmbcpm-part-underline"><?php _e('Content . Imprint', 'print-my-blog');?></span>
+                <span class="pmbcpm-top-margin-title pmbcpm-toc-title pmb-title pmbcpm-part-underline"><?php _e('Content', 'print-my-blog');?></span>
             </div>
         </header>
     </div>
