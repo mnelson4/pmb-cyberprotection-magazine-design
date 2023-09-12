@@ -255,8 +255,7 @@
 
     .pmbcpm-qr-code-wrapper{
         /*background-color:rgb(222,228,233);*/
-        padding-right:5px;
-        margin-bottom:-5px;
+        padding-right:10px;
         float:left;
         /*display:flex;*/
         /*width:50%;*/
