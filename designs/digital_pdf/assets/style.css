@@ -195,7 +195,10 @@
     }
 
     /* parts */
-    .pmb-front_matter_article-wrapper, .pmb-back_matter_article-wrapper, .pmb-article-wrapper:not(.pmb-part-wrapper:first-of-type .pmb-article-wrapper:first-of-type){
+    .pmb-front_matter_article-wrapper,
+    .pmb-back_matter_article-wrapper,
+    .pmb-part-wrapper,
+    .pmb-article-wrapper:not(.pmb-part-wrapper:first-of-type .pmb-article-wrapper:first-of-type, :first-of-type){
         break-before:page;
     }
 
@@ -356,6 +359,7 @@
     }
     blockquote p {
         quotes: "“" "”" "‘" "’";
+        text-align:left;
     }
     blockquote p::before {
         content: '“';
